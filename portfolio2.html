@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio 2</title>
+
+  <style>
+    :root {
+      --bg-color: rgb(48, 47, 47);
+      --content-bg-color: rgb(58, 58, 58);
+      --nav-bg-color: rgb(56, 56, 56);
+      --border-color: green;
+      --text-shadow-color: black;
+      --box-shadow-color: lightgrey;
+      --text-decoration-color: blue;
+      --font-color: white;
+
+    }
+
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      display: grid;
+      grid-template-columns: 1fr 20fr 1fr;
+      grid-template-rows: 1fr 50fr 1fr;
+    }
+
+    header {
+      grid-column: 1/4;
+      grid-row: 1/2;
+    }
+
+    nav {
+      width: 100%;
+      padding: 20px;
+      background-color: var(--nav-bg-color);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      justify-content: end;
+      align-items: center;
+      /* margin:auto 10px auto 10px; */
+    }
+
+    li a {
+      color: var(--font-color);
+      text-decoration: none;
+
+    }
+
+    ul :first-child {
+      margin-right: auto;
+    }
+
+    .home {
+      position: fixed;
+      left: 10px;
+
+
+    }
+
+    li a:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--text-decoration-color);
+    }
+
+    main {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 100%;
+      display:grid;
+      grid-template-columns: 5fr  1fr 5fr;
+      grid-template-rows: auto;
+    }
+
+    .right{
+      grid-column: 1/2;
+      width:100%;
+      
+      
+    }
+
+    .right article p {
+     padding:200px 50px 150px 282px;
+    }
+
+    
+    .middle{
+      grid-column: 2/3;
+    }
+     .left{
+      grid-column: 3/4;
+      padding: 50px 20px;
+    }
+   .left img{
+    border-radius: 50%;
+    width:400px;
+   }
+    img{
+      width:100%;
+    }
+
+
+    @media (max-width: 600px) {
+     main{
+      display:flex;
+      flex-direction:column;
+     }
+
+     .right article p{
+      padding:20px 90px;
+      
+     }
+
+     .left{
+      padding:50px 120px;
+     }
+     .left img{
+      width:300px;
+     }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li class="home"> <a href="#"> home </a></li>
+        <li> <a href="#"> skills </a></li>
+        <li> <a href="#"> Experience </a></li>
+        <li> <a href="#"> Contact </a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="right">
+      <article>
+        <p>
+          Front-End Developer passionate about building beautiful, functional, and user-centric web experiences. I
+          specialize in turning design concepts into high-performance, responsive code using Html (5), JavaScript ,
+          and
+          modern CSS. Constantly seeking opportunities to learn new technologies and deliver exceptional digital
+          solutions.
+        </p>
+      </article>
+
+    </section>
+    <section class="middle"></section>
+    <section class="left">
+      <div class="img">
+         <img src="/dev.png" class="img-me" alt="this is an image">
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
